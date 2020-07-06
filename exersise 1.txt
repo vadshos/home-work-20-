@@ -36,6 +36,6 @@ int main() {
 
 		cout << endl;
 	}
-	cout << "tura can move " << step;
+	cout << "tura can move " << step--;
 	return 0;
 }

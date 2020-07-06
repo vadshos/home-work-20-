@@ -1,0 +1,41 @@
+#include<iostream>
+#include"windows.h"
+#include<ctime>;
+
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+	const int sizeY = 8;
+	const int sizeX = 8;
+	int X = 0, Y = 0;
+	int step = 0;
+	int number[sizeY][sizeX]{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, };
+	cout << "enter Y";
+	cin >> Y;
+	cout << "enter X";
+	cin >> X;
+	srand(time(NULL));
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 8; j++) {
+
+			if (i == Y || j == X) {
+				cout << " " << number[i][j];
+				step++;
+
+			}
+			else {
+				cout << " ";
+			}
+
+		}
+
+
+
+
+		cout << endl;
+	}
+	cout << "tura can move " << step;
+	return 0;
+}

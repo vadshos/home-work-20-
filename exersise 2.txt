@@ -1,0 +1,39 @@
+#include<iostream>
+#include"windows.h"
+#include<ctime>;
+
+
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "");
+	const int sizeY = 5;
+	const int sizeX = 5;
+	int X = 0, Y = 0;
+	int number[sizeY][sizeX]{1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7 };
+	cout << "enter Y";
+	cin >> X;
+	cout << "enter Y";
+	cin >> Y;
+	int Arr[5];
+	int Arr2[5];
+	
+	
+	for (int i = 0; i < 5; i++) {
+		Arr[i] = number[i][X];
+		Arr2[i] = number[i][Y];
+		
+	}
+	for (int i = 0; i < 5; i++) {
+		 number[i][X] = Arr2[i];
+		 number[i][Y] = Arr[i];
+
+	}
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			cout<<" "<< number[i][j];
+		}
+		cout << endl;
+	}
+	
+	return 0;
+}
